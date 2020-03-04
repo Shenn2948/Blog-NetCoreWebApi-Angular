@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="commentsForm" *ngIf="auth.isAuthenticated">
+
+    <!-- <div class="form-group">
+        <textarea class="form-control" id="content" name="content" rows="3" maxlength="200"
+                  [(ngModel)]="comment.content" #content="ngModel" placeholder="Type your message here"></textarea>
+    </div> -->
+
+    <div class="form-group">
+        <textarea class="form-control" formControlName="commentContent" rows="3" maxlength="200"
+                  placeholder="Type your message here"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success mb-5">Post reply</button>
+
+</form>

@@ -1,0 +1,9 @@
+<div class="container mt-3">
+    <div class="jumbotron" *ngIf='existed'>
+        <h1 class="display-4">{{article.title}}</h1>
+        <p class="lead">{{article.content}}</p>
+        <hr class="my-4">
+    </div>
+
+    <app-comment-list></app-comment-list>
+</div>

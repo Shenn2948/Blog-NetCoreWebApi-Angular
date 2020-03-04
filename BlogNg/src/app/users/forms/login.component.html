@@ -1,0 +1,26 @@
+<article>
+
+    <h4 class="display-4 text-center mb-4 mt-1">Log in</h4>
+    <hr>
+
+    <mat-card class="d-flex justify-content-center">
+
+        <form [formGroup]="form" (ngSubmit)="auth.login(form.value)">
+            <mat-form-field>
+                <input matInput type="email" placeholder="Email" formControlName="email" autocomplete="on" email>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password" autocomplete="on">
+            </mat-form-field>
+            <br>
+
+            <div class="form-group">
+                <button mat-raised-button class="btn btn-primary btn-block" [disabled]="!form.valid"> Login </button>
+            </div>
+            <p class="text-center"><a href="#" class="btn">Forgot password?</a></p>
+        </form>
+
+    </mat-card>
+</article>

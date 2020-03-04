@@ -1,0 +1,16 @@
+<div class="container">
+
+    <div class="card border-dark mb-3 mt-3" *ngFor="let article of articles">
+        <div class="card-body text-dark">
+            <h1 class="display-4"><a routerLink="/articles/{{article.id}}" class="card-link">{{article.title}}</a></h1>
+        </div>
+
+        <div class="card-footer text-muted d-flex justify-content-between align-items-center">
+            <div>{{article.user.userName}}</div>
+            <small>{{article.createdDate | date : 'yyyy-MM-dd'}}</small>
+        </div>
+    </div>
+
+    <button *ngIf="auth.isAuthenticated" routerLink="/article" type="button" class="btn btn-primary btn-lg mb-5">New article</button>
+
+</div>
